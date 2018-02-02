@@ -1,0 +1,269 @@
+@eColor: #ec6337;
+@d8line: 1px solid #d8d8d8;
+
+.regist-button {
+  width: 60px;
+  height: 32px;
+  border: 1px solid @eColor;
+  border-radius: 4px;
+  outline: none;
+  color: @eColor;
+  background-color: white;
+}
+
+.regist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1024px;
+}
+
+.regist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &>* {
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+
+  &>span {
+    color: @eColor;
+  }
+
+  .normalSize {
+    width: 340px;
+    height: 40px;
+    border: @d8line;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  .mark {
+    position: absolute;
+    right: -14px;
+    top: 10px;
+    margin-left: 8px;
+    color: @eColor;
+  }
+
+  &>button {
+    .normalSize;
+  }
+
+  .input-container {
+    position: relative;
+    width: 340px;
+
+    input {
+      .normalSize;
+      font-size: 12px;
+      color: #333;  
+      padding-left: 8px;
+    }
+
+    ::-moz-placeholder {
+      color: #999;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #999;
+    }
+
+    .check-button {
+      .normalSize;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 98px;
+      color: @eColor;
+      border: 0;
+      background: transparent;
+    }
+
+    &>span:not(.el-cascader) {
+      .mark;
+    }
+  }
+
+  .types {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+
+    .type {
+      .normalSize;  
+      width: 80px;
+      background: transparent;
+    }
+
+    .type-selected {
+      .type;
+      border: 1px solid @eColor;
+    }
+
+    span {
+      .mark;
+    }
+  }
+
+  label {
+    position: relative;
+    width: 340px;
+    font-size: 12px;
+    color: #333;
+
+    input {
+      cursor: pointer;
+    }
+
+    input:checked + span + .show-box {
+      background: @eColor;
+    }
+
+    .show-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: @d8line;
+      border-radius: 2px;
+      background: white;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 6px;
+        width: 3px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .delegate {
+      color: @eColor;
+      cursor: pointer;
+    }
+  }
+
+  .login-container {
+    font-size: 14px;
+
+    a {
+      color: @eColor;
+      text-decoration: none;
+    }
+  }
+
+  &>button {
+    color: white;
+    background-color: @eColor;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #little-mum {
+    display: none;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.company, .group {
+  width: 1024px;
+  height: auto;
+}
+
+.company {
+  margin: 40px 0;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  box-sizing: border-box;
+  padding: 0 e('calc(50% - 512px)');
+  background-color: #333;
+
+  .about {
+    font-size: 14px;
+    color: white;
+    margin-left: 20px;
+    cursor: not-allowed;
+  }
+  
+  .cer {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #d8d8d8;
+    margin-left: 20px;
+  }
+}
+
+.delegate-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .delegate {
+    position: relative;
+    width: 944px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 0 24px 0 rgba(0,0,0,0.12), 0 24px 24px 0 rgba(0,0,0,0.24);
+    border-radius: 4px;
+  }
+
+  .d-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    height: 280px;
+    font-size: 12px;
+    white-space: pre-wrap;
+    overflow-y: scroll
+  }
+
+  .d-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: url(/static/img/icon_close.png) 0 0 ~'/' 30px 30px no-repeat;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .d-check {
+    position: absolute;
+    left: e('calc(50% - 70px)');
+    bottom: 8px;
+    width: 140px;
+    height: 32px;
+    color: white;
+    background: #EC6337;
+    border-radius: 4px;
+    outline: none;
+    border: 0;
+  }
+}

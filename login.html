@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  		<meta name="renderer" content="webkit"> 
+		<title>萤火虫</title>
+		<link rel="stylesheet" type="text/css" href="static/css/head.css">
+		<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+	</head>
+
+
+	<body>
+		<div class="header-container">
+		    <div class="header">
+		      <img class="logo" src="static/img/p_yhc.png" alt="logo"/>
+		      <div class="utils">
+		        <button class="empty" onclick="location.href='/regist.html'">注册</button>
+		        <button id="login-button" class="special" location.href='/login.html'">登录</button>
+		      </div>
+		    </div>
+		  </div>
+		
+		  <div class="account-container">
+
+	    		<div id="login">
+	    			<div  class="login">
+				      <div class="title">登录</div>
+				      <div class="userinfo">
+				        <input id="username" placeholder="输入用户名"  />
+				        <input id="password" type="password" placeholder="输入密码"  />
+				        <div class="utils">
+				          <label>
+				            <input type="checkbox" id="remeber-password" />
+				            记住密码
+				            <div class="show-box"></div>
+				          </label>
+				          <span class="forget" id="forget-btn">忘记密码?</span>
+				        </div>
+				        <button id="login-btn">登录<img id="little-mum" src="https://007vin.com/img/load.gif" /></button>
+				      </div>
+				      <div class="regist-container">
+				        没有账号？<span id="regist-btn">立即注册</span>
+				      </div>
+				    </div>
+	    		</div>
+				
+				<div id="forget" class="forget">
+			      <div class="back">
+			      	<span id="back-btn"><  账号密码登录</span>
+			      </div>
+			      <span class="title">手机验证修改密码</span>
+			      <div class="input-container">
+			      	<input id="phone-reset" placeholder="手机号" autofocus />
+			      </div>
+			      <div class="input-container">
+			        <input id="code-reset" placeholder="验证码" />
+			        <button id="check-btn" class="check-button"
+			          >获取验证码</button>
+			      </div>
+			      <div class="input-container">
+			      	<input  id="pass-reset" placeholder="新密码（6位以上数字或字母）" type="password" />
+			      </div>
+			      <div class="input-container">
+			      	<input id="checkpass-reset" placeholder="确认密码（6位以上数字或字母）" type="password" />
+			      </div>
+			      <button id="submit-btn">确认</button>
+			    </div>
+		
+		  </div>
+
+		  <h3>联盟合作加盟商</h3>
+		  <ul id="companys"></ul>
+		  <img class="group" src="static/img/groups.png" alt="group" />
+		  <div class="bottom">
+		    <!-- <span class="about">关于我们</span> -->
+		    <span class="cer">© 2017 yhcqp.com</span>
+		    <a class="cer" href="http://www.miitbeian.gov.cn/">浙ICP备：17026959号-3</a>
+		  </div>
+		
+		<script src="src/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="src/js/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script defer src="src/js/login.js"></script>
+	</body>
+</html>
