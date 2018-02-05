@@ -1,6 +1,24 @@
 @eColor: #ec6337;
 @d8line: 1px solid #d8d8d8;
 
+html {
+  height: 100%;
+
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+
+    input {
+      padding: 0 0 0 8px;
+    }
+    
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
 .regist-button {
   width: 60px;
   height: 32px;
@@ -12,16 +30,14 @@
 }
 
 .regist-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 1024px;
+  margin: 0 auto;
 }
 
 .regist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
 
   &>* {
     margin-top: 10px;
@@ -83,7 +99,7 @@
       background: transparent;
     }
 
-    &>span:not(.el-cascader) {
+    &>span{
       .mark;
     }
   }
@@ -221,6 +237,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 
   .delegate {
     position: relative;
@@ -229,6 +246,7 @@
     background: white;
     box-shadow: 0 0 24px 0 rgba(0,0,0,0.12), 0 24px 24px 0 rgba(0,0,0,0.24);
     border-radius: 4px;
+    margin: 0 auto;
   }
 
   .d-title {
@@ -249,7 +267,7 @@
     top: 10px;
     width: 30px;
     height: 30px;
-    background: url(/static/img/icon_close.png) 0 0 ~'/' 30px 30px no-repeat;
+    background: url("../../static/img/icon_close.png") 0 0 ~'/' 30px 30px no-repeat;
     border-radius: 15px;
     cursor: pointer;
   }

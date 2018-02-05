@@ -1,54 +1,41 @@
 .account-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  position: relative;
   width: 1024px;
   height: 400px;
-  background: url(../img/banner.png) 0 0 / 100% auto no-repeat;
+  margin: 0 auto;
 }
-.account-container .account {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 356px;
-  height: 360px;
-  margin-right: 40px;
-  background: white;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
+.account-container .img-bg{
+  width: 100%;
 }
-.account-container .account > .title {
-  color: #ec6337;
+
+#login,#forget{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 25px 40px 0 0;
 }
+
 .account-container .login {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 356px;
-  height: 360px;
-  margin-right: 40px;
-  background: white;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-  border-radius: 4px;
-  /*display: none;*/
+    position: relative;
+    display: block;
+    width: 356px;
+    height: 360px;
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
 }
 .account-container .login > .title {
-  color: #ec6337;
+    height: 70px;
+    line-height: 90px;
+    text-align: center;
+    color: #ec6337;
 }
-.account-container .login > .title {
-  margin-top: 40px;
-}
+
 .account-container .login .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
-.account-container .login .userinfo > * {
-  margin-top: 20px;
-  border-radius: 4px;
-}
+
 .account-container .login .userinfo > input,
 .account-container .login .userinfo button {
   width: 320px;
@@ -56,54 +43,32 @@
   border: 1px solid #d8d8d8;
   outline: none;
   box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 4px;
+  line-height: 40px;
 }
 .account-container .login .userinfo .utils {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 320px;
-  font-size: 12px;
-  color: #333;
+    width: 320px;
+    font-size: 12px;
+    color: #333;
+    margin: 10px auto;
+    text-align: left;
 }
-.account-container .login .userinfo .utils label {
-  position: relative;
+
+.account-container .login .userinfo .utils input {
   cursor: pointer;
+  padding-left:0px;
 }
-.account-container .login .userinfo .utils label input {
-  cursor: pointer;
-}
-.account-container .login .userinfo .utils label input:checked + .show-box {
+.account-container .login .userinfo .utils input:checked {
   background: #ec6337;
 }
-.account-container .login .userinfo .utils label .show-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid #d8d8d8;
-  background: white;
-}
-.account-container .login .userinfo .utils label .show-box:before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 3px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
+
 .account-container .login .userinfo .utils .forget {
-  color: #ec6337;
-  cursor: pointer;
+    color: #ec6337;
+    cursor: pointer;
+    float: right;
 }
 .account-container .login .userinfo > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 10px;
   border: 0;
   color: white;
@@ -118,14 +83,13 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 40px;
   font-size: 12px;
   color: #333;
   border-top: 1px solid #d8d8d8;
+  text-align: center;
+  line-height: 40px;
 }
 .account-container .login .regist-container span {
   color: #ec6337;
@@ -230,14 +194,16 @@
   background: #ec6337;
   color: white;
 }
+.h3-title{
+  text-align: center;
+}
 #companys {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  width: 1024px;
-  list-style: none;
-  margin-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 1024px;
+    list-style: none;
+    /*margin-bottom: 40px;*/
 }
 #companys li {
   width: 170px;
@@ -245,6 +211,7 @@
   text-align: center;
   background: #efefef;
   font-size: 14px;
+  display: inline-block;
 }
 #companys .uneven-row:nth-child(2n + 1) {
   background: #e1e1e1;
@@ -258,5 +225,7 @@
 .group {
   width: 1024px;
   height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
