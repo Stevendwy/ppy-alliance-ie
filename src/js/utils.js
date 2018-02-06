@@ -45,3 +45,18 @@ function clearBracket(aString) {
 	}
 	return aString
 }
+
+
+function getUserInfo (callback) {
+	$.ajax({
+		type: "get",
+		url: "/community/user/profile",
+		success: function(data) {
+			if (data.code === 1) {
+				callback(data.data.full_name)
+			}else {
+				callback("wrongmsg")
+			}
+		}
+	});
+}

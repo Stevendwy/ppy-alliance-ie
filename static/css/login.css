@@ -36,6 +36,19 @@
     text-align: center;
 }
 
+.account-container .login .userinfo .reg-title:nth-child(1){
+      position: absolute;
+      left: 25px;
+      font-size: 14px;
+}
+
+.account-container .login .userinfo .reg-title:nth-child(3){
+      position: absolute;
+      left: 25px;
+      top: 140px;
+      font-size: 14px;
+}
+
 .account-container .login .userinfo > input,
 .account-container .login .userinfo button {
   width: 320px;
@@ -131,6 +144,7 @@
   width: 320px;
   margin-top: 12px;
 }
+
 .account-container > .forget .input-container .normalSize {
   width: 320px;
   height: 40px;
@@ -178,12 +192,20 @@
   margin-left: 8px;
   color: #ec6337;
 }
-.account-container > .forget .input-container > span:not(.el-cascader) {
+/* .account-container > .forget .input-container > span:not(.el-cascader) {
   position: absolute;
   right: -14px;
   top: 10px;
   margin-left: 8px;
   color: #ec6337;
+} */
+
+.account-container > .forget .input-container .reg-title{
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  left: 8px;
+  
 }
 .account-container > .forget > button {
   width: 320px;

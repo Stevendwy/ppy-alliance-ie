@@ -1,9 +1,6 @@
 !function () {
-  console.log("aa--aa")
   getAjax('http://www.yhcqp.com/system/members', "", function (res) {
-    console.log(res)
     if(!res.data) return
-    console.log(res)
       var companysDOM = document.getElementById('companys');
       var companys = res.data;
       var companysLength = companys.length;

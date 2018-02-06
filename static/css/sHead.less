@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+
+    input {
+      padding: 0 0 0 8px;
+    }
+    
+    button {
+      cursor: pointer;
+    }
+  }
+}
+// 内容部分页面使用
+.s-head{
+	width: 100%;
+    background-color: #d8d8d8;
+
+    .s-head-content{
+	    width: 1024px;
+	    height: 30px;
+	    margin: 0 auto;
+	    line-height: 30px;
+	    .head-left,.head-right{
+			width: 49%;
+			display: inline-block;
+			position: relative;
+		}
+		.head-left{
+			text-align: left;
+			
+			span{
+				font-size: 14px;
+    			color: #666;
+			}
+		}
+		
+		.head-right{
+			text-align: right;
+
+			div{
+				display: inline-block;
+				font-size: 14px;
+    			color: #666;
+			}
+			.nav-clicked{
+				 color: #ec6337;
+			}
+			.head-shop{
+
+			}
+			.head-slide{
+				position: relative;
+				.head-show{
+					position: absolute;
+				    width: 100%;
+				    border: 1px solid;
+				    right: 0;
+				    z-index: 5;
+				    text-align: center;
+				    display: none;
+				    &>div{
+				    	width: 100%;
+				    }
+				}
+			}
+			.head-slide:hover{
+				.head-show{
+					display: block;
+
+					&>div:hover{
+						background-color: pink;
+					}
+				}
+			}
+		}
+	}
+}

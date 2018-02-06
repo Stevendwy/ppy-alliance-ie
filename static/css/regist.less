@@ -38,7 +38,7 @@ html {
   width: 360px;
   margin: 0 auto;
   text-align: center;
-
+  padding-top: 30px;
   &>* {
     margin-top: 10px;
     border-radius: 4px;
@@ -72,7 +72,14 @@ html {
   .input-container {
     position: relative;
     width: 340px;
-
+    
+    &>.reg-title{
+      position: absolute;
+      left: -90px;
+      right: auto;
+      width: 70px;
+      text-align: left;
+    }
     input {
       .normalSize;
       font-size: 12px;
@@ -80,6 +87,17 @@ html {
       padding-left: 8px;
       line-height: 40px;
     }
+
+    #city-choose{
+      display: block;
+      width: 100%;
+      height: 206px;
+      border: 1px solid;
+      position: absolute;
+      background-color: white;
+      z-index: 2;
+      display: none;
+      }
 
     ::-moz-placeholder {
       color: #999;
@@ -124,6 +142,13 @@ html {
 
     span {
       .mark;
+    }
+    &>.reg-title{
+      position: absolute;
+      left: -90px;
+      right: auto;
+      width: 70px;
+      text-align: left;
     }
   }
 
@@ -213,6 +238,8 @@ html {
   box-sizing: border-box;
   padding: 0 e('calc(50% - 512px)');
   background-color: #333;
+  position: absolute;
+  bottom: 0;
 
   .about {
     font-size: 14px;
