@@ -1,6 +1,8 @@
-.s-content{
+// 特卖会
+.s-onsale{
 	width: 1024px;
 	margin: 0 auto;
+	display: none;
 	.s-logo{
 		position: relative;
 	    width: 100%;
@@ -121,4 +123,378 @@
     		}
 	    }
 	}
+}
+
+// 搜索页面
+.s-search{
+	min-width: 1024px;
+	margin: 0 auto;
+	.s-search-bg{
+		position: relative;
+	    width: 100%;
+	    height: 88px;
+	    background-color: #fff;
+	    box-shadow: 0 2px 4px 0 rgba(0,0,0,.24);
+	    .s-search-input{
+	    	width: 1024px;
+	    	margin: 0 auto;
+
+	    	.s-search-img{
+			    height: 36px;
+			    display: inline-block;
+			    margin: 26px 20px 0 0;
+			    vertical-align: middle;
+	    	}
+	    	.s-input{
+	    		position: relative;
+			    width: 600px;
+			    height: 40px;
+			    display: inline-block;
+			    margin: 26px 0 0 0;
+			    vertical-align: middle;
+			    .s-input-input{
+		    	    width: 472px;
+				    padding-left: 8px;
+				    border: 1px solid #ed6337;
+				    color: #333;
+				    background-color: #fff;
+				    height: 38px;
+				    outline: none;
+			    }
+			    .s-input-btn{
+			    	position: relative;
+				    width: 118px;
+				    background-color: #ec6337;
+				    color: #fff;
+				    height: 40px;
+				    float: right;
+				    outline: none;
+				    border: 1px solid #ec6337;
+				    font-size: 14px;
+			    }
+	    	}
+	    }
+	}
+	.s-search-result{
+		margin: 0 auto;
+		width: 1024px;
+		min-height: 368px;
+		background: url(/static/img/theme/standby_yhc.png) center center / 200px no-repeat;
+		
+		.s-search-without{
+			display: none;
+			width: 100%;
+		    min-height: 368px;
+		    background-color: #fff;
+		    text-align: center;
+    		line-height: 300px;
+
+		    .s-search-without-img{
+				width: 40px;
+			    height: 40px;
+			    background: url("/static/img/spirit.png") 0 -280px/40px no-repeat;
+			    background-size: 100%;
+			    display: inline-block;
+			    align-items: center;
+			    vertical-align: middle;
+		    }
+		    .s-search-without-remind{
+				font-size: 16px;
+    			color: #9b9b9b;
+		    }
+		}
+		.s-search-ul{
+		    min-height: 400px;
+			background-color: #fff;
+			display: none;
+
+			.s-search-ul-lifirst,.s-search-ul-li{
+				width: 100%;
+    			height: 40px;
+				
+				&>div{
+					display: inline-block;
+				    height: 40px;
+				    line-height: 40px;
+				    text-align: left;
+				    float: left;
+				    font-size: 14px;
+    				color: #333;
+				}
+				&>div:nth-child(1){
+					width: 5%;
+				}
+				&>div:nth-child(2){
+					width: 25%;
+				}
+				&>div:nth-child(3){
+					width: 70%;
+				}
+			}
+			.s-search-ul-lifirst{
+				background-color: #e6e6e6;
+			}
+			.s-search-ul-li{
+				background-color: #f5f5f5;
+				cursor: pointer;
+				
+				&>div:nth-child(2){
+					color: #4990e2;
+				}
+			}
+		}
+		.s-search-detail{
+			display: none;
+			min-height: 400px;
+    		background-color: #fff;
+			.s-search-detail-head{
+				width: 100%;
+			    height: 40px;
+			    text-align: center;
+			    border: 0 solid #efefef;
+			    box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+
+				.s-backBtn{
+					width: 52px;
+				    height: 24px;
+				    margin-left: 8px;
+				    border: 1px solid #cac9ca;
+				    box-shadow: 0 0 0 0 rgba(0,0,0,.3);
+				    // background: #f9f9f9 url(/static/img/spirit.png) 4px -88px/40px no-repeat;
+				    cursor: pointer;
+				    display: inline-block;
+				    float: left;
+					margin-top: 8px;
+				}
+				.s-head-filter{
+				    box-sizing: border-box;
+				    height: 100%;
+				    margin: 0 10px;
+				    border-bottom: 2px solid #fff;
+				    cursor: pointer;
+				    font-size: 14px;
+				    display: inline-block;
+    				color: #ec6337;
+				    line-height: 40px;
+				}
+				.filted{
+					border-bottom: 2px solid #ec6337;
+				}
+			}
+			.s-search-detail-goods{
+				font-size: 14px;
+				margin-top: 10px;
+
+				.s-search-detail-goods-title{
+					.goods-title-pid{
+						margin: 20px 0 10px 0;
+						&>span{
+							font-size: 16px;
+    						margin: 0 20px 20px 0;
+						}
+					}
+					.goods-title-brand,.goods-titls-city{
+						margin: 0 0 10px 0;
+						&>span{
+							font-size: 14px;
+    						margin: 10px 20px 0 0;
+						}
+						&>span:nth-child(1){
+							color: #9b9b9b;
+						}
+					}
+				}
+
+				.s-search-detail-goods-lifirst{
+				    width: 100%;
+				    min-height: 40px;
+				    border-bottom: 1px solid #d8d8d8;
+				    background-color: #f5f5f5;
+				    &>div{
+				    	display: inline-block;
+				    	width: 10%;
+				    	line-height: 40px;
+						text-align: center;
+				    }
+				    &>div:nth-child(1){
+						width: 20%;
+			    	}
+			    	&>div:nth-child(2){
+			    		width: 15%;
+			    	}
+			    	&>div:nth-child(4){
+			    		width: 15%;
+			    	}
+				}
+				.s-search-detail-goods-li{
+				    .goods-li-child{
+				    	overflow: hidden;
+				    	width: 100%;
+					    min-height: 40px;
+					    border-bottom: 1px solid #d8d8d8;
+				    	&>div{
+				    		display: inline-block;
+						    min-height: 40px;
+						    word-wrap: break-word;
+						    float: left;
+						    text-align: center;
+						    width: 10%;
+						    padding-top: 15px;
+						    border-right: 1px solid #d8d8d8;
+						    &>span{
+						    	line-height: auto;
+						    }
+				    	}
+				    	&>div:nth-child(1){
+							width: 19%;
+							border-left: 1px solid #d8d8d8;
+				    	}
+				    	&>div:nth-child(2){
+				    		width: 15%;
+				    	}
+				    	&>div:nth-child(4){
+				    		width: 15%;
+				    	}
+
+				    }
+				}
+			}
+			.s-search-detail-detail{
+				display: none;
+				.s-search-detail-detail-libasis:nth-child(1){
+					margin: 20px 0 0;
+					&>div{
+						font-size: 16px;
+					}
+				}
+				.s-search-detail-detail-libasis:nth-child(n+2){
+					width: 100%;
+				    border-bottom: 1px dashed #d8d8d8;
+					&>div{
+						display: inline-block;
+						height: 40px;
+						line-height: 40px;
+					}
+					&>div:nth-child(1){
+						width: 100px;
+					    padding: 0 8px;
+					    color: #999;
+					    font-size: 12px;
+					}
+					&>div:nth-child(2){
+						font-size: 14px;
+    					color: #333;
+					}
+				}
+				.s-search-detail-detail-ul{
+					.s-search-detail-detail-li{
+						width: 100%;
+					    min-height: 40px;
+					    overflow: hidden;
+					    
+					    &>div{
+					    	display: inline-block;
+					    	float: left;
+					    	padding: 20px 0 0 0;
+					    }
+					    &>div:nth-child(1){
+					    	width: 5%;
+					    }
+					    &>div:nth-child(2){
+					    	width: 35%;
+					    }
+					    &>div:nth-child(3){
+					    	width: 10%;
+					    }
+					    &>div:nth-child(4){
+					    	width: 20%;
+					    }
+					    &>div:nth-child(5){
+					    	width: 30%;
+					    }
+					}
+					.s-search-detail-detail-li:nth-child(1){
+					    background: #f2f2f2;
+					    line-height: 40px;
+					    border: 1px solid #d8d8d8;
+					    border-bottom: none;
+					    line-height: 40px;
+					    text-align: center;
+					    &>div{
+					    	display: inline-block;
+					    	float: left;
+					    	padding: 0;
+					    }
+					}
+					.s-search-detail-detail-li:nth-child(n+2){
+						&:hover{
+							cursor: pointer;
+							margin-bottom: 2px;
+						    margin-left: 4px;
+						    width: 99%;
+						    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+// 购物车
+.s-shopcar{
+	display: none;
+	.shop-title{
+		width: 100%;
+	    height: 60px;
+	    font-size: 20px;
+	    color: #ec6337;
+	    background-color: #fff;
+	    box-shadow: 0 2px 4px 0 rgba(0,0,0,.24);
+	    text-align: center;
+	    line-height: 60px;
+	}
+	.shop-content{
+		width: 1024px;
+    	height: 600px;
+    	margin: 0 auto;
+    	background: url(/static/img/p_shop.png) center center / 200px no-repeat;
+	}
+}
+// 已买
+.s-havgoods{
+	display: none;
+	.goods-bg{
+		background-color: #fff;
+	    box-shadow: 0 2px 4px 0 rgba(0,0,0,.24);
+	    position: relative;
+	    width: 100%;
+	    .goods-title{
+	    	height: 60px;
+		    width: 1024px;
+		    margin: 0 auto;
+		    line-height: 60px;
+		    font-size: 20px;
+		    color: #ec6337;
+	    }
+	}
+	.goods-content{
+		height: 600px;
+		width: 1024px;
+		margin: 0 auto;
+		.goods-left{
+			width: 200px;
+		}
+		.goods-right{
+			height: 100%;
+			width: 804px;
+    		background: url(/static/img/p_order.png) center center / 150px no-repeat;
+		}
+	}
+}
+// 我的萤火虫
+
+.s-mycenter{
+	display: none;
 }

@@ -20,40 +20,119 @@
 					<span>您好</span>
 				</div>
 				<div class="head-right">
-					<div class="nav-clicked">特卖会</div>
-					<div>零件搜索</div>
-					<div class="head-shop">购物车</div>
-					<div>已买到货品</div>
-					<div class="head-slide">
+					<div class="nav">特卖会</div>
+					<div class="nav nav-clicked">零件搜索</div>
+					<div class="nav">购物车</div>
+					<div class="nav">已买到货品</div>
+					<div class="nav head-slide">
 						我的萤火虫
 						<div class="head-show">
-							<div>个人中心</div>
-							<div>退出</div>
+							<div class="head-self">个人中心</div>
+							<div class="head-exit">退出</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-
-		<div class="s-content">
+		<!-- 特卖会 -->
+		<div class="s-list s-onsale">
 			<div class="s-logo">
 				<div class="s-logo-title">特卖会</div>
 				<img src="/static/img/theme/logo_yhc.png" alt="logo">
 			</div>
 			<div class="s-filter">
 				<span class="city">城市：</span>
-				
+
 			</div>
 			<div class="s-goods"></div>
 		</div>
-		
-		
+
+		<!-- 零件搜索 -->
+		<div class="s-list s-search">
+			<div class="s-search-bg">
+				<div class="s-search-input">
+					<img class="s-search-img" src="/static/img/theme/standby_yhc.png" alt="logoimg">
+					<div class="s-input">
+						<input type="text"  class="s-input-input" name="text" 
+						value="请输入奥迪零件编号"
+						onFocus="if(this.value=='请输入奥迪零件编号') this.value = ''"
+						onBlur="if(this.value=='') this.value='请输入奥迪零件编号'">
+						<button id="s-search-btn" class="s-input-btn">搜索</button>
+					</div>
+				</div>
+			</div>
+			<div class="s-search-result">
+				<!-- 搜索无结果 -->
+				<div class="s-search-without">
+					<div class="s-search-without-img"></div> 
+					<span class="s-search-without-remind">抱歉, 暂无此零件供应~</span>
+				</div>
+				<!-- 搜索出结果列表 -->
+				<div class="s-search-ul">
+					<div class="s-search-ul-lifirst">
+						<div></div>
+						<div>零件号</div>
+						<div>名称</div>
+					</div>
+				</div>
+				<!-- 搜索出结果详情 -->
+				<div class="s-search-detail">
+					<div class="s-search-detail-head">
+						<div class="s-backBtn">&#9668</div>
+						<div class="s-head-filter filted">商品</div>
+						<div class="s-head-filter">详情</div>
+					</div>
+					<div class="s-search-detail-goods">
+						<div class="s-search-detail-goods-title">
+							<div class="goods-title-pid"></div>
+							<div class="goods-title-brand">
+								<span class="goods-title-brand-first">品牌：</span>
+							</div>
+							<div class="goods-titls-city">
+								<span class="goods-title-city-first">城市：</span>
+							</div>
+						</div>
+						<div class="s-search-detail-goods-lifirst"></div>
+						<div class="s-search-detail-goods-li"></div>
+					</div>
+					<div class="s-search-detail-detail">
+
+						<div class="s-search-detail-detail-ul">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 购物车 -->
+		<div class="s-list s-shopcar">
+			<div class="shop-title">购物车</div>
+			<div class="shop-content"></div>
+		</div>
+		<!-- 已买到货物 -->
+		<div class="s-list s-havgoods">
+			<div class="goods-bg">
+				<div class="goods-title">萤火虫买家中心</div>
+			</div>
+			<div class="goods-content">
+				<div class="goods-left">left</div>
+				<div class="goods-right">content</div>
+			</div>
+		</div>
+		<!-- 我的萤火虫 -->
+		<div class="s-list s-mycenter">
+			<div class="my-title">我的萤火虫</div>
+			<div class="my-content"></div>
+		</div>
 		  	
 		
 	</body>
 	<script src="src/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="src/js/jquery.cookie.js" ype="text/javascript"></script> 
 		<script src="src/js/utils.js" type="text/javascript" charset="utf-8"></script>
-		<script defer src="src/js/sOnsale.js"></script>
+		<script type="text/javascript" src="src/js/main.js"></script>
+		<script type="text/javascript" src="src/js/sOnsale.js"></script>
+		<script type="text/javascript" src="src/js/sSearch.js"></script>
 </html>

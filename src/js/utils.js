@@ -14,10 +14,16 @@ function getAjax(url, content, callback) {
 
 function postAjax(url, content, callback) {
 //	content.timeStamp = parseInt(Date.parse(new Date()) / 1000 / 86400) * 86400 - 28800
-	
+	// 处理post 请求 特殊情况
+	var urls = url + "?"
+    if (content) {
+    	for (var Key in content){
+	      urls = urls +'&'+''+Key+'='+content[Key]+'';
+	    }
+    }
 	$.ajax({
 		type: "post",
-		url: url,
+		url: urls,
 		data: content,
 		success: function(data) {
 			if(data.code == 1) callback(data)

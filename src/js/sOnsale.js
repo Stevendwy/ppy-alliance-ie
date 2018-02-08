@@ -2,21 +2,20 @@
 * @Author: steven
 * @Date:   2018-02-06 10:53:12
 * @Last Modified by:   steven
-* @Last Modified time: 2018-02-06 18:14:08
+* @Last Modified time: 2018-02-08 16:53:28
 */
-
-// 获取列表
-function getGoods (obj){
+// 获取特卖会 列表
+function getGoods (obj,cityindex){
 	getAjax('/community/sailling', obj, function(res) {
-	      console.log(res)
-	      cityList(res.item_city);
+	      cityList(res.item_city,cityindex);
 	      goodList(res.data)
 	 })
 }
 
 
-function cityList (data) {
+function cityList (data,index) {
 	$(".city-click").remove();
+	data.unshift('全部');
 	var newSpan = data.map(function(elem, index) {
 		if (elem !== "" || elem !== null) {
 			return "<span key='index' class='city-click'>"+elem+"</span>";
@@ -24,24 +23,24 @@ function cityList (data) {
 	})
 
 	$(".city").after(newSpan)
-	$(".city-click").eq(0).addClass('city-clicked');
+	$(".city-click").eq(index - 1).addClass('city-clicked');
 
 	$(".city-click").on('click', function(event) {	
 		if (!$(this).hasClass('city-clicked')) {
 			$(".city-click").removeClass("city-clicked");
 			$(this).addClass('city-clicked');
-			console.log($(this).text())
+			var textVlaue = $(this).text();
+			if (textVlaue === "全部") {textVlaue = ""}
 			var objs = {
 				page:1,
-				address:$(this).text()
+				address:textVlaue
 			}
-			getGoods(objs)
+			getGoods(objs,$(this).index())
 		}
 	});
 }
 
 function goodList (data) {
-	console.log(data)
 	$(".s-goods").empty();
 	var newDiv = data.map(function(item, index) {
 		return `<div key=`+index+` class="item">
@@ -68,12 +67,13 @@ function nofind(img){
     img.onerror=null; //如果错误图片也不存在就会死循环一直跳，所以要设置成null，也可以不加
 } 
 
-!function (){
+
+function onsaleInit (){
 	getUserInfo(function(data){
 		// full_name
 		if (data !== "wrongmsg") {
 			$(".head-username").text(data)
 		}
 	})
-	getGoods({})
-}()
+	getGoods({},1);
+}
