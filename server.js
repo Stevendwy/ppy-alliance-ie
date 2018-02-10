@@ -11,7 +11,7 @@ let cookie = ''
 superagent
   .post(target + '/community/login')
   // .send({username: '15689799395', password: '123123'})
-  .send({username: '17682302034', password: 'aa123456'})
+  .send({username: '18337125987', password: 'aa123456'})
   .end((err, res) => {
     // console.log(res.body)
     if(res.body.code === 1) console.log('登录成功')
